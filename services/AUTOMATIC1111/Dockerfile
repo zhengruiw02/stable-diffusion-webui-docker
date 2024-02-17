@@ -53,6 +53,8 @@ RUN --mount=type=cache,target=/root/.cache/pip \
 RUN apt-get -y install libgoogle-perftools-dev && apt-get clean
 ENV LD_PRELOAD=libtcmalloc.so
 
+ENV HF_ENDPOINT=https://hf-mirror.com
+
 COPY . /docker
 
 RUN \
